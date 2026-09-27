@@ -2,47 +2,70 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
     <title>Telegram Bot Hub</title>
-    <!-- Telegram WebApp SDK -->
-    <script src="https://telegram.org"></script>
+
     <style>
         :root {
-            --bg-color: var(--tg-theme-bg-color, #ffffff);
-            --text-color: var(--tg-theme-text-color, #222222);
-            --hint-color: var(--tg-theme-hint-color, #707579);
-            --button-color: var(--tg-theme-button-color, #2481cc);
-            --button-text: var(--tg-theme-button-text-color, #ffffff);
-            --secondary-bg: var(--tg-theme-secondary-bg-color, #f4f4f5);
+            --bg: #ffffff;
+            --text: #222222;
+            --secondary: #f3f4f6;
+            --hint: #777777;
+            --blue: #2481cc;
+            --border: rgba(0,0,0,0.08);
+        }
+
+        * {
+            box-sizing: border-box;
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            height: 100vh;
-            overflow: hidden;
+            background: var(--bg);
+            color: var(--text);
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Helvetica,
+                Arial,
+                sans-serif;
         }
+
+        /* =========================
+           HEADER
+        ========================= */
 
         header {
-            padding: 15px;
-            text-align: center;
-            font-size: 18px;
-            font-weight: bold;
-            border-bottom: 1px solid rgba(0,0,0,0.08);
-            background-color: var(--bg-color);
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0 15px;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            background: var(--bg);
+            z-index: 100;
         }
 
-        .content {
-            flex: 1;
-            overflow-y: auto;
-            padding: 15px;
-            padding-bottom: 80px; 
+        #page-title {
+            font-size: 19px;
+            font-weight: 700;
+        }
+
+        /* =========================
+           CONTENT
+        ========================= */
+
+        .container {
+            max-width: 650px;
+            margin: auto;
+            padding: 18px 15px 100px;
         }
 
         .page {
@@ -53,198 +76,970 @@
             display: block;
         }
 
-        .category-list, .bot-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
+        .intro {
+            text-align: center;
+            margin-bottom: 22px;
         }
 
-        .list-item {
-            background-color: var(--secondary-bg);
-            padding: 15px;
+        .intro-icon {
+            font-size: 42px;
+            margin-bottom: 8px;
+        }
+
+        .intro-title {
+            font-size: 23px;
+            font-weight: 700;
+        }
+
+        .intro-description {
+            color: var(--hint);
+            font-size: 14px;
+            margin-top: 6px;
+            line-height: 1.5;
+        }
+
+        /* =========================
+           LIST CARDS
+        ========================= */
+
+        .list-card {
+            background: var(--secondary);
+            border-radius: 14px;
+            padding: 16px;
             margin-bottom: 12px;
-            border-radius: 12px;
-            cursor: pointer;
             display: flex;
-            justify-content: space-between;
             align-items: center;
-            transition: opacity 0.2s;
+            justify-content: space-between;
+            cursor: pointer;
+            transition: transform 0.15s, opacity 0.15s;
         }
 
-        .list-item:active {
-            opacity: 0.7;
+        .list-card:active {
+            transform: scale(0.98);
+            opacity: 0.75;
         }
 
-        .item-info {
+        .list-left {
             display: flex;
-            flex-direction: column;
-            gap: 4px;
-            padding-right: 10px;
+            align-items: center;
+            gap: 13px;
         }
 
-        .item-title {
-            font-weight: 600;
+        .list-icon {
+            width: 46px;
+            height: 46px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: white;
+            font-size: 23px;
+            flex-shrink: 0;
+        }
+
+        .list-name {
             font-size: 16px;
+            font-weight: 650;
         }
 
-        .item-desc {
+        .list-description {
+            color: var(--hint);
             font-size: 13px;
-            color: var(--hint-color);
-            font-weight: normal;
-            line-height: 1.4;
+            margin-top: 4px;
+            line-height: 1.35;
         }
 
         .arrow {
-            color: var(--hint-color);
-            font-weight: bold;
-            flex-shrink: 0;
+            color: var(--hint);
+            font-size: 22px;
+            margin-left: 10px;
         }
 
-        .open-btn {
-            color: var(--button-color);
-            font-size: 14px;
+        /* =========================
+           BOT CARDS
+        ========================= */
+
+        .bot-card {
+            background: var(--secondary);
+            border-radius: 14px;
+            padding: 15px;
+            margin-bottom: 12px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+        }
+
+        .bot-info {
+            min-width: 0;
+            flex: 1;
+        }
+
+        .bot-name {
+            font-size: 16px;
+            font-weight: 650;
+        }
+
+        .bot-description {
+            color: var(--hint);
+            font-size: 13px;
+            margin-top: 4px;
+            line-height: 1.4;
+        }
+
+        .open-button {
+            background: var(--blue);
+            color: white;
+            border: none;
+            border-radius: 9px;
+            padding: 9px 13px;
+            font-size: 13px;
             font-weight: 600;
+            text-decoration: none;
+            white-space: nowrap;
             flex-shrink: 0;
         }
 
-        nav {
+        .open-button:active {
+            opacity: 0.75;
+        }
+
+        /* =========================
+           NAVIGATION
+        ========================= */
+
+        .navigation {
             position: fixed;
             bottom: 0;
             left: 0;
             right: 0;
-            height: 60px;
-            background-color: var(--bg-color);
-            border-top: 1px solid rgba(0,0,0,0.08);
+
+            height: 68px;
+
+            background: var(--bg);
+            border-top: 1px solid var(--border);
+
             display: flex;
-            justify-content: space-around;
             align-items: center;
+            justify-content: center;
+
+            gap: 8px;
+
             z-index: 1000;
         }
 
-        .nav-btn {
-            background: none;
+        .nav-button {
             border: none;
-            color: var(--hint-color);
+            background: var(--secondary);
+            color: var(--text);
+
+            border-radius: 10px;
+
+            padding: 10px 16px;
+
             font-size: 14px;
-            font-weight: 500;
+            font-weight: 600;
+
             cursor: pointer;
-            padding: 10px;
-            text-align: center;
-            flex: 1;
         }
 
-        .nav-btn.active {
-            color: var(--button-color);
-            font-weight: bold;
+        .nav-button:active {
+            opacity: 0.7;
         }
+
+        .nav-button.primary {
+            background: var(--blue);
+            color: white;
+        }
+
+        .nav-button:disabled {
+            opacity: 0.35;
+            cursor: default;
+        }
+
+        /* =========================
+           PAGE COUNTER
+        ========================= */
+
+        .page-counter {
+            text-align: center;
+            color: var(--hint);
+            font-size: 12px;
+            margin-top: 18px;
+        }
+
+        /* =========================
+           MOBILE
+        ========================= */
+
+        @media (max-width: 480px) {
+
+            .container {
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+
+            .bot-card {
+                padding: 13px;
+            }
+
+            .open-button {
+                padding: 8px 10px;
+            }
+
+            .navigation {
+                height: 64px;
+            }
+
+            .nav-button {
+                padding: 9px 13px;
+            }
+        }
+
     </style>
 </head>
+
 <body>
 
-    <header id="app-title">Bot Directories</header>
+<header>
+    <div id="page-title">Telegram Bot Hub</div>
+</header>
 
-    <div class="content">
-        <!-- MAIN HOME PAGE -->
-        <div id="home-page" class="page active">
-            <ul class="category-list">
-                <!-- Bot List 1 Category Card -->
-                <li class="list-item" onclick="showSubPage('list-1-page', 'Bot List 1')">
-                    <div class="item-info">
-                        <div class="item-title">🤖 Bot List 1</div>
-                        <div class="item-desc">A collection of general utility, management, and essential system automation bots.</div>
-                    </div>
-                    <span class="arrow">&gt;</span>
-                </li>
-                <!-- Bot List 2 Category Card -->
-                <li class="list-item" onclick="showSubPage('list-2-page', 'Bot List 2')">
-                    <div class="item-info">
-                        <div class="item-title">🎮 Bot List 2</div>
-                        <div class="item-desc">A collection of entertainment, gaming, media downloaders, and fun interactive bots.</div>
-                    </div>
-                    <span class="arrow">&gt;</span>
-                </li>
-            </ul>
+
+<div class="container">
+
+
+    <!-- =========================================
+         HOME PAGE
+    ========================================== -->
+
+    <div id="home-page" class="page active">
+
+        <div class="intro">
+
+            <div class="intro-icon">
+                🤖
+            </div>
+
+            <div class="intro-title">
+                Telegram Bot Hub
+            </div>
+
+            <div class="intro-description">
+                Discover useful Telegram bots organized into different categories.
+            </div>
+
         </div>
 
-        <!-- SUB-PAGE: BOT LIST 1 (8 Bots) -->
-        <div id="list-1-page" class="page">
-            <ul class="bot-list">
-                <li class="list-item" onclick="openTelegramLink('https://t.me')">
-                    <div class="item-info">
-                        <div class="item-title">BotFather</div>
-                        <div class="item-desc">The primary system bot used to build, configure, and manage all external Telegram bots.</div>
+
+        <!-- BOT LIST 1 -->
+
+        <div class="list-card"
+             onclick="openList(1)">
+
+            <div class="list-left">
+
+                <div class="list-icon">
+                    🤖
+                </div>
+
+                <div>
+
+                    <div class="list-name">
+                        Bot List 1
                     </div>
-                    <span class="open-btn">Open &nearr;</span>
-                </li>
-                <li class="list-item" onclick="openTelegramLink('https://t.me')">
-                    <div class="item-info">
-                        <div class="item-title">Controller Bot</div>
-                        <div class="item-desc">Helps channel creators format posts, view detailed analytics, and schedule content.</div>
+
+                    <div class="list-description">
+                        General utility and productivity bots.
                     </div>
-                    <span class="open-btn">Open &nearr;</span>
-                </li>
-                <li class="list-item" onclick="openTelegramLink('https://t.me')">
-                    <div class="item-info">
-                        <div class="item-title">IFTTT Bot</div>
-                        <div class="item-desc">Connects your Telegram chats or channels to external web services and smart devices.</div>
-                    </div>
-                    <span class="open-btn">Open &nearr;</span>
-                </li>
-                <li class="list-item" onclick="openTelegramLink('https://t.me')">
-                    <div class="item-info">
-                        <div class="item-title">VoteBot</div>
-                        <div class="item-desc">Quickly construct interactive polls and questionnaires for groups and channels.</div>
-                    </div>
-                    <span class="open-btn">Open &nearr;</span>
-                </li>
-                <li class="list-item" onclick="openTelegramLink('https://t.me')">
-                    <div class="item-info">
-                        <div class="item-title">Livegram Bot</div>
-                        <div class="item-desc">A tool to build localized feedback and customer support bots with inbox routing.</div>
-                    </div>
-                    <span class="open-btn">Open &nearr;</span>
-                </li>
-                <li class="list-item" onclick="openTelegramLink('https://t.me')">
-                    <div class="item-info">
-                        <div class="item-title">Sticker Bot</div>
-                        <div class="item-desc">Discover global custom sticker packs, search by emoji, or create custom sets.</div>
-                    </div>
-                    <span class="open-btn">Open &nearr;</span>
-                </li>
-                <li class="list-item" onclick="openTelegramLink('https://t.me')">
-                    <div class="item-info">
-                        <div class="item-title">URL Shortener Bot</div>
-                        <div class="item-desc">Instantly converts long tracking links into neat, condensed custom URLs.</div>
-                    </div>
-                    <span class="open-btn">Open &nearr;</span>
-                </li>
-                <li class="list-item" onclick="openTelegramLink('https://t.me')">
-                    <div class="item-info">
-                        <div class="item-title">File Converter</div>
-                        <div class="item-desc">Converts audio, video, images, and document files between formats on the fly.</div>
-                    </div>
-                    <span class="open-btn">Open &nearr;</span>
-                </li>
-            </ul>
+
+                </div>
+
+            </div>
+
+            <div class="arrow">
+                ›
+            </div>
+
         </div>
 
-        <!-- SUB-PAGE: BOT LIST 2 (6 Bots) -->
-        <div id="list-2-page" class="page">
-            <ul class="bot-list">
-                <li class="list-item" onclick="openTelegramLink('https://t.me')">
-                    <div class="item-info">
-                        <div class="item-title">GameBot</div>
-                        <div class="item-desc">Play competitive HTML5 mini-games against your contacts directly in any chat thread.</div>
+
+        <!-- BOT LIST 2 -->
+
+        <div class="list-card"
+             onclick="openList(2)">
+
+            <div class="list-left">
+
+                <div class="list-icon">
+                    🎮
+                </div>
+
+                <div>
+
+                    <div class="list-name">
+                        Bot List 2
                     </div>
-                    <span class="open-btn">Open &nearr;</span>
-                </li>
-                <li class="list-item" onclick="openTelegramLink('https://t.me')">
-                    <div class="item-info">
-                        <div class="item-title">QuizBot</div>
-                        <div class="item-desc">Build complex trivia challenges, timed academic exams, or casual multiplayer quizzes.</div>
+
+                    <div class="list-description">
+                        Entertainment and gaming bots.
                     </div>
-                    <span class="open-btn">Open &nearr;</span>
-                </li>
-                <li class="list-item" onclick="openTelegramLink('https://t.me')">
-                    <div class="item-info">
-                        <div class="item-title">IMDb Bot</div>
+
+                </div>
+
+            </div>
+
+            <div class="arrow">
+                ›
+            </div>
+
+        </div>
+
+
+        <!-- BOT LIST 3 -->
+
+        <div class="list-card"
+             onclick="openList(3)">
+
+            <div class="list-left">
+
+                <div class="list-icon">
+                    🛠️
+                </div>
+
+                <div>
+
+                    <div class="list-name">
+                        Bot List 3
+                    </div>
+
+                    <div class="list-description">
+                        Tools, converters, and useful services.
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="arrow">
+                ›
+            </div>
+
+        </div>
+
+
+        <!-- BOT LIST 4 -->
+
+        <div class="list-card"
+             onclick="openList(4)">
+
+            <div class="list-left">
+
+                <div class="list-icon">
+                    📱
+                </div>
+
+                <div>
+
+                    <div class="list-name">
+                        Bot List 4
+                    </div>
+
+                    <div class="list-description">
+                        Media, downloads, and content bots.
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="arrow">
+                ›
+            </div>
+
+        </div>
+
+
+        <!-- BOT LIST 5 -->
+
+        <div class="list-card"
+             onclick="openList(5)">
+
+            <div class="list-left">
+
+                <div class="list-icon">
+                    ⭐
+                </div>
+
+                <div>
+
+                    <div class="list-name">
+                        Bot List 5
+                    </div>
+
+                    <div class="list-description">
+                        Featured and recommended bots.
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="arrow">
+                ›
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- =========================================
+         BOT LIST PAGE
+    ========================================== -->
+
+    <div id="bot-page" class="page">
+
+        <div id="bot-list-container">
+            <!-- Bots are inserted here using JavaScript -->
+        </div>
+
+        <div class="page-counter" id="page-counter">
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- =========================================
+     NAVIGATION
+========================================== -->
+
+<div class="navigation">
+
+    <button
+        id="back-button"
+        class="nav-button"
+        onclick="goBack()">
+
+        ← Back
+
+    </button>
+
+
+    <button
+        id="home-button"
+        class="nav-button primary"
+        onclick="goHome()">
+
+        🏠 Home
+
+    </button>
+
+
+    <button
+        id="forward-button"
+        class="nav-button"
+        onclick="goForward()">
+
+        Forward →
+
+    </button>
+
+</div>
+
+
+
+<script>
+
+/* =========================================================
+   BOT DATA
+   =========================================================
+
+   CHANGE THE BOT NAMES, DESCRIPTIONS AND LINKS BELOW.
+
+   You can have UP TO 6 bots in each list.
+
+   Example Telegram link:
+
+   https://t.me/BotUsername
+
+   ========================================================= */
+
+
+const botLists = {
+
+    1: {
+
+        title: "Bot List 1",
+
+        bots: [
+
+            {
+                name: "Bot 1",
+                description: "Description for Telegram Bot 1.",
+                link: "https://t.me/YourBot1"
+            },
+
+            {
+                name: "Bot 2",
+                description: "Description for Telegram Bot 2.",
+                link: "https://t.me/YourBot2"
+            },
+
+            {
+                name: "Bot 3",
+                description: "Description for Telegram Bot 3.",
+                link: "https://t.me/YourBot3"
+            },
+
+            {
+                name: "Bot 4",
+                description: "Description for Telegram Bot 4.",
+                link: "https://t.me/YourBot4"
+            },
+
+            {
+                name: "Bot 5",
+                description: "Description for Telegram Bot 5.",
+                link: "https://t.me/YourBot5"
+            },
+
+            {
+                name: "Bot 6",
+                description: "Description for Telegram Bot 6.",
+                link: "https://t.me/YourBot6"
+            }
+
+        ]
+
+    },
+
+
+    2: {
+
+        title: "Bot List 2",
+
+        bots: [
+
+            {
+                name: "Bot 1",
+                description: "Description for Telegram Bot 1.",
+                link: "https://t.me/YourBot1"
+            },
+
+            {
+                name: "Bot 2",
+                description: "Description for Telegram Bot 2.",
+                link: "https://t.me/YourBot2"
+            },
+
+            {
+                name: "Bot 3",
+                description: "Description for Telegram Bot 3.",
+                link: "https://t.me/YourBot3"
+            },
+
+            {
+                name: "Bot 4",
+                description: "Description for Telegram Bot 4.",
+                link: "https://t.me/YourBot4"
+            },
+
+            {
+                name: "Bot 5",
+                description: "Description for Telegram Bot 5.",
+                link: "https://t.me/YourBot5"
+            },
+
+            {
+                name: "Bot 6",
+                description: "Description for Telegram Bot 6.",
+                link: "https://t.me/YourBot6"
+            }
+
+        ]
+
+    },
+
+
+    3: {
+
+        title: "Bot List 3",
+
+        bots: [
+
+            {
+                name: "Bot 1",
+                description: "Description for Telegram Bot 1.",
+                link: "https://t.me/YourBot1"
+            },
+
+            {
+                name: "Bot 2",
+                description: "Description for Telegram Bot 2.",
+                link: "https://t.me/YourBot2"
+            },
+
+            {
+                name: "Bot 3",
+                description: "Description for Telegram Bot 3.",
+                link: "https://t.me/YourBot3"
+            },
+
+            {
+                name: "Bot 4",
+                description: "Description for Telegram Bot 4.",
+                link: "https://t.me/YourBot4"
+            },
+
+            {
+                name: "Bot 5",
+                description: "Description for Telegram Bot 5.",
+                link: "https://t.me/YourBot5"
+            },
+
+            {
+                name: "Bot 6",
+                description: "Description for Telegram Bot 6.",
+                link: "https://t.me/YourBot6"
+            }
+
+        ]
+
+    },
+
+
+    4: {
+
+        title: "Bot List 4",
+
+        bots: [
+
+            {
+                name: "Bot 1",
+                description: "Description for Telegram Bot 1.",
+                link: "https://t.me/YourBot1"
+            },
+
+            {
+                name: "Bot 2",
+                description: "Description for Telegram Bot 2.",
+                link: "https://t.me/YourBot2"
+            },
+
+            {
+                name: "Bot 3",
+                description: "Description for Telegram Bot 3.",
+                link: "https://t.me/YourBot3"
+            },
+
+            {
+                name: "Bot 4",
+                description: "Description for Telegram Bot 4.",
+                link: "https://t.me/YourBot4"
+            },
+
+            {
+                name: "Bot 5",
+                description: "Description for Telegram Bot 5.",
+                link: "https://t.me/YourBot5"
+            },
+
+            {
+                name: "Bot 6",
+                description: "Description for Telegram Bot 6.",
+                link: "https://t.me/YourBot6"
+            }
+
+        ]
+
+    },
+
+
+    5: {
+
+        title: "Bot List 5",
+
+        bots: [
+
+            {
+                name: "Bot 1",
+                description: "Description for Telegram Bot 1.",
+                link: "https://t.me/YourBot1"
+            },
+
+            {
+                name: "Bot 2",
+                description: "Description for Telegram Bot 2.",
+                link: "https://t.me/YourBot2"
+            },
+
+            {
+                name: "Bot 3",
+                description: "Description for Telegram Bot 3.",
+                link: "https://t.me/YourBot3"
+            },
+
+            {
+                name: "Bot 4",
+                description: "Description for Telegram Bot 4.",
+                link: "https://t.me/YourBot4"
+            },
+
+            {
+                name: "Bot 5",
+                description: "Description for Telegram Bot 5.",
+                link: "https://t.me/YourBot5"
+            },
+
+            {
+                name: "Bot 6",
+                description: "Description for Telegram Bot 6.",
+                link: "https://t.me/YourBot6"
+            }
+
+        ]
+
+    }
+
+};
+
+
+
+/* =========================================================
+   CURRENT PAGE
+   ========================================================= */
+
+let currentList = 0;
+
+
+/* =========================================================
+   OPEN BOT LIST
+   ========================================================= */
+
+function openList(listNumber) {
+
+    currentList = listNumber;
+
+    showBotPage();
+
+}
+
+
+/* =========================================================
+   DISPLAY BOT PAGE
+   ========================================================= */
+
+function showBotPage() {
+
+    const homePage =
+        document.getElementById("home-page");
+
+    const botPage =
+        document.getElementById("bot-page");
+
+    const title =
+        document.getElementById("page-title");
+
+    const container =
+        document.getElementById("bot-list-container");
+
+
+    homePage.classList.remove("active");
+
+    botPage.classList.add("active");
+
+
+    const list =
+        botLists[currentList];
+
+
+    title.textContent =
+        list.title;
+
+
+    container.innerHTML = "";
+
+
+    list.bots.forEach(function(bot) {
+
+        const card =
+            document.createElement("div");
+
+        card.className =
+            "bot-card";
+
+
+        card.innerHTML = `
+
+            <div class="bot-info">
+
+                <div class="bot-name">
+                    ${bot.name}
+                </div>
+
+                <div class="bot-description">
+                    ${bot.description}
+                </div>
+
+            </div>
+
+            <a
+                class="open-button"
+                href="${bot.link}"
+                target="_blank">
+
+                Open ↗
+
+            </a>
+
+        `;
+
+
+        container.appendChild(card);
+
+    });
+
+
+    document.getElementById("page-counter").textContent =
+        "Bot List " + currentList + " of 5";
+
+
+    updateNavigation();
+
+}
+
+
+/* =========================================================
+   HOME
+   ========================================================= */
+
+function goHome() {
+
+    currentList = 0;
+
+    document
+        .getElementById("bot-page")
+        .classList.remove("active");
+
+    document
+        .getElementById("home-page")
+        .classList.add("active");
+
+
+    document.getElementById("page-title").textContent =
+        "Telegram Bot Hub";
+
+
+    updateNavigation();
+
+}
+
+
+/* =========================================================
+   BACK
+   ========================================================= */
+
+function goBack() {
+
+    if (currentList === 0) {
+
+        return;
+
+    }
+
+
+    if (currentList === 1) {
+
+        goHome();
+
+        return;
+
+    }
+
+
+    currentList--;
+
+    showBotPage();
+
+}
+
+
+/* =========================================================
+   FORWARD
+   ========================================================= */
+
+function goForward() {
+
+    if (currentList === 0) {
+
+        openList(1);
+
+        return;
+
+    }
+
+
+    if (currentList < 5) {
+
+        currentList++;
+
+        showBotPage();
+
+    }
+
+}
+
+
+/* =========================================================
+   UPDATE NAVIGATION BUTTONS
+   ========================================================= */
+
+function updateNavigation() {
+
+    const backButton =
+        document.getElementById("back-button");
+
+    const forwardButton =
+        document.getElementById("forward-button");
+
+
+    if (currentList === 0) {
+
+        backButton.disabled = true;
+
+    } else {
+
+        backButton.disabled = false;
+
+    }
+
+
+    if (currentList >= 5) {
+
+        forwardButton.disabled = true;
+
+    } else {
+
+        forwardButton.disabled = false;
+
+    }
+
+}
+
+
+/* =========================================================
+   INITIALIZE
+   ========================================================= */
+
+updateNavigation();
+
+</script>
+
+</body>
+</html>
