@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Telegram Bot Hub</title>
+    <!-- Telegram WebApp SDK -->
+    <script src="https://telegram.org"></script>
+    <style>
+        :root {
+            --bg-color: var(--tg-theme-bg-color, #ffffff);
+            --text-color: var(--tg-theme-text-color, #222222);
+            --hint-color: var(--tg-theme-hint-color, #707579);
+            --button-color: var(--tg-theme-button-color, #2481cc);
+            --button-text: var(--tg-theme-button-text-color, #ffffff);
+            --secondary-bg: var(--tg-theme-secondary-bg-color, #f4f4f5);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        header {
+            padding: 15px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: bold;
+            border-bottom: 1px solid rgba(0,0,0,0.08);
+            background-color: var(--bg-color);
+        }
+
+        .content {
+            flex: 1;
+            overflow-y: auto;
+            padding: 15px;
+            padding-bottom: 80px; 
+        }
+
+        .page {
+            display: none;
+        }
+
+        .page.active {
+            display: block;
+        }
+
+        .category-list, .bot-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .list-item {
+            background-color: var(--secondary-bg);
+            padding: 15px;
+            margin-bottom: 12px;
+            border-radius: 12px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: opacity 0.2s;
+        }
+
+        .list-item:active {
+            opacity: 0.7;
+        }
+
+        .item-info {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            padding-right: 10px;
+        }
+
+        .item-title {
+            font-weight: 600;
+            font-size: 16px;
+        }
+
+        .item-desc {
+            font-size: 13px;
+            color: var(--hint-color);
+            font-weight: normal;
+            line-height: 1.4;
+        }
+
+        .arrow {
+            color: var(--hint-color);
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        .open-btn {
+            color: var(--button-color);
+            font-size: 14px;
+            font-weight: 600;
+            flex-shrink: 0;
+        }
+
+        nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            background-color: var(--bg-color);
+            border-top: 1px solid rgba(0,0,0,0.08);
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .nav-btn {
+            background: none;
+            border: none;
+            color: var(--hint-color);
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            padding: 10px;
+            text-align: center;
+            flex: 1;
+        }
+
+        .nav-btn.active {
+            color: var(--button-color);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <header id="app-title">Bot Directories</header>
+
+    <div class="content">
+        <!-- MAIN HOME PAGE -->
+        <div id="home-page" class="page active">
+            <ul class="category-list">
+                <!-- Bot List 1 Category Card -->
+                <li class="list-item" onclick="showSubPage('list-1-page', 'Bot List 1')">
+                    <div class="item-info">
+                        <div class="item-title">🤖 Bot List 1</div>
+                        <div class="item-desc">A collection of general utility, management, and essential system automation bots.</div>
+                    </div>
+                    <span class="arrow">&gt;</span>
+                </li>
+                <!-- Bot List 2 Category Card -->
+                <li class="list-item" onclick="showSubPage('list-2-page', 'Bot List 2')">
+                    <div class="item-info">
+                        <div class="item-title">🎮 Bot List 2</div>
+                        <div class="item-desc">A collection of entertainment, gaming, media downloaders, and fun interactive bots.</div>
+                    </div>
+                    <span class="arrow">&gt;</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- SUB-PAGE: BOT LIST 1 (8 Bots) -->
+        <div id="list-1-page" class="page">
+            <ul class="bot-list">
+                <li class="list-item" onclick="openTelegramLink('https://t.me')">
+                    <div class="item-info">
+                        <div class="item-title">BotFather</div>
+                        <div class="item-desc">The primary system bot used to build, configure, and manage all external Telegram bots.</div>
+                    </div>
+                    <span class="open-btn">Open &nearr;</span>
+                </li>
+                <li class="list-item" onclick="openTelegramLink('https://t.me')">
+                    <div class="item-info">
+                        <div class="item-title">Controller Bot</div>
+                        <div class="item-desc">Helps channel creators format posts, view detailed analytics, and schedule content.</div>
+                    </div>
+                    <span class="open-btn">Open &nearr;</span>
+                </li>
+                <li class="list-item" onclick="openTelegramLink('https://t.me')">
+                    <div class="item-info">
+                        <div class="item-title">IFTTT Bot</div>
+                        <div class="item-desc">Connects your Telegram chats or channels to external web services and smart devices.</div>
+                    </div>
+                    <span class="open-btn">Open &nearr;</span>
+                </li>
+                <li class="list-item" onclick="openTelegramLink('https://t.me')">
+                    <div class="item-info">
+                        <div class="item-title">VoteBot</div>
+                        <div class="item-desc">Quickly construct interactive polls and questionnaires for groups and channels.</div>
+                    </div>
+                    <span class="open-btn">Open &nearr;</span>
+                </li>
+                <li class="list-item" onclick="openTelegramLink('https://t.me')">
+                    <div class="item-info">
+                        <div class="item-title">Livegram Bot</div>
+                        <div class="item-desc">A tool to build localized feedback and customer support bots with inbox routing.</div>
+                    </div>
+                    <span class="open-btn">Open &nearr;</span>
+                </li>
+                <li class="list-item" onclick="openTelegramLink('https://t.me')">
+                    <div class="item-info">
+                        <div class="item-title">Sticker Bot</div>
+                        <div class="item-desc">Discover global custom sticker packs, search by emoji, or create custom sets.</div>
+                    </div>
+                    <span class="open-btn">Open &nearr;</span>
+                </li>
+                <li class="list-item" onclick="openTelegramLink('https://t.me')">
+                    <div class="item-info">
+                        <div class="item-title">URL Shortener Bot</div>
+                        <div class="item-desc">Instantly converts long tracking links into neat, condensed custom URLs.</div>
+                    </div>
+                    <span class="open-btn">Open &nearr;</span>
+                </li>
+                <li class="list-item" onclick="openTelegramLink('https://t.me')">
+                    <div class="item-info">
+                        <div class="item-title">File Converter</div>
+                        <div class="item-desc">Converts audio, video, images, and document files between formats on the fly.</div>
+                    </div>
+                    <span class="open-btn">Open &nearr;</span>
+                </li>
+            </ul>
+        </div>
+
+        <!-- SUB-PAGE: BOT LIST 2 (6 Bots) -->
+        <div id="list-2-page" class="page">
+            <ul class="bot-list">
+                <li class="list-item" onclick="openTelegramLink('https://t.me')">
+                    <div class="item-info">
+                        <div class="item-title">GameBot</div>
+                        <div class="item-desc">Play competitive HTML5 mini-games against your contacts directly in any chat thread.</div>
+                    </div>
+                    <span class="open-btn">Open &nearr;</span>
+                </li>
+                <li class="list-item" onclick="openTelegramLink('https://t.me')">
+                    <div class="item-info">
+                        <div class="item-title">QuizBot</div>
+                        <div class="item-desc">Build complex trivia challenges, timed academic exams, or casual multiplayer quizzes.</div>
+                    </div>
+                    <span class="open-btn">Open &nearr;</span>
+                </li>
+                <li class="list-item" onclick="openTelegramLink('https://t.me')">
+                    <div class="item-info">
+                        <div class="item-title">IMDb Bot</div>
