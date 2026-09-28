@@ -1,31 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <title>Neural Bot</title>
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width,
+                   initial-scale=1.0,
+                   maximum-scale=1.0,
+                   user-scalable=no">
+
+    <title>Telegram Bot Hub</title>
+
+
+    <!-- =========================================
+         FONT AWESOME
+    ========================================== -->
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
     <style>
+
         :root {
+
             --bg: #ffffff;
             --text: #222222;
             --secondary: #f3f4f6;
             --hint: #777777;
             --blue: #2481cc;
             --border: rgba(0,0,0,0.08);
+
         }
+
 
         * {
             box-sizing: border-box;
         }
 
+
         body {
+
             margin: 0;
             padding: 0;
+
             background: var(--bg);
             color: var(--text);
+
             font-family:
                 -apple-system,
                 BlinkMacSystemFont,
@@ -34,204 +57,348 @@
                 Helvetica,
                 Arial,
                 sans-serif;
+
         }
 
-        /* =========================
+
+        /* =========================================
            HEADER
-        ========================= */
+        ========================================= */
 
         header {
+
             height: 60px;
+
             display: flex;
             align-items: center;
             justify-content: center;
+
             padding: 0 15px;
-            border-bottom: 1px solid var(--border);
+
+            border-bottom:
+                1px solid var(--border);
+
             position: sticky;
             top: 0;
+
             background: var(--bg);
+
             z-index: 100;
+
         }
+
 
         #page-title {
+
             font-size: 19px;
             font-weight: 700;
+
         }
 
-        /* =========================
-           CONTENT
-        ========================= */
+
+        /* =========================================
+           CONTAINER
+        ========================================= */
 
         .container {
+
             max-width: 650px;
+
             margin: auto;
-            padding: 18px 15px 100px;
+
+            padding:
+                18px
+                15px
+                100px;
+
         }
+
 
         .page {
             display: none;
         }
 
+
         .page.active {
             display: block;
         }
 
+
+        /* =========================================
+           INTRO
+        ========================================= */
+
         .intro {
+
             text-align: center;
+
             margin-bottom: 22px;
+
         }
+
 
         .intro-icon {
+
             font-size: 42px;
+
             margin-bottom: 8px;
+
         }
+
 
         .intro-title {
+
             font-size: 23px;
+
             font-weight: 700;
+
         }
+
 
         .intro-description {
+
             color: var(--hint);
+
             font-size: 14px;
+
             margin-top: 6px;
+
             line-height: 1.5;
+
         }
 
-        /* =========================
-           LIST CARDS
-        ========================= */
+
+        /* =========================================
+           CATEGORY CARDS
+        ========================================= */
 
         .list-card {
+
             background: var(--secondary);
+
             border-radius: 14px;
+
             padding: 16px;
+
             margin-bottom: 12px;
+
             display: flex;
+
             align-items: center;
+
             justify-content: space-between;
+
             cursor: pointer;
-            transition: transform 0.15s, opacity 0.15s;
+
+            transition:
+                transform 0.15s,
+                opacity 0.15s;
+
         }
+
 
         .list-card:active {
+
             transform: scale(0.98);
+
             opacity: 0.75;
+
         }
+
 
         .list-left {
+
             display: flex;
+
             align-items: center;
+
             gap: 13px;
+
         }
+
 
         .list-icon {
+
             width: 46px;
             height: 46px;
+
             border-radius: 12px;
+
             display: flex;
+
             align-items: center;
             justify-content: center;
+
             background: white;
+
             font-size: 23px;
+
             flex-shrink: 0;
+
         }
+
 
         .list-name {
+
             font-size: 16px;
+
             font-weight: 650;
+
         }
+
 
         .list-description {
+
             color: var(--hint);
+
             font-size: 13px;
+
             margin-top: 4px;
+
             line-height: 1.35;
+
         }
+
 
         .arrow {
+
             color: var(--hint);
+
             font-size: 22px;
+
             margin-left: 10px;
+
         }
 
-        /* =========================
+
+        /* =========================================
            BOT CARDS
-        ========================= */
+        ========================================= */
 
         .bot-card {
+
             background: var(--secondary);
+
             border-radius: 14px;
+
             padding: 15px;
+
             margin-bottom: 12px;
 
             display: flex;
+
             align-items: center;
+
             justify-content: space-between;
+
             gap: 12px;
+
         }
+
 
         .bot-info {
+
             min-width: 0;
+
             flex: 1;
+
         }
+
 
         .bot-name {
+
             font-size: 16px;
+
             font-weight: 650;
+
         }
+
 
         .bot-description {
+
             color: var(--hint);
+
             font-size: 13px;
+
             margin-top: 4px;
+
             line-height: 1.4;
+
         }
+
 
         .open-button {
+
             background: var(--blue);
+
             color: white;
+
             border: none;
+
             border-radius: 9px;
+
             padding: 9px 13px;
+
             font-size: 13px;
+
             font-weight: 600;
+
             text-decoration: none;
+
             white-space: nowrap;
+
             flex-shrink: 0;
+
         }
+
 
         .open-button:active {
+
             opacity: 0.75;
+
         }
 
-        /* =========================
+
+        /* =========================================
            NAVIGATION
-        ========================= */
+        ========================================= */
 
         .navigation {
+
             position: fixed;
+
             bottom: 0;
+
             left: 0;
+
             right: 0;
 
             height: 68px;
 
             background: var(--bg);
-            border-top: 1px solid var(--border);
+
+            border-top:
+                1px solid var(--border);
 
             display: flex;
+
             align-items: center;
+
             justify-content: center;
 
             gap: 8px;
 
             z-index: 1000;
+
         }
 
+
         .nav-button {
+
             border: none;
+
             background: var(--secondary);
+
             color: var(--text);
 
             border-radius: 10px;
@@ -239,82 +406,147 @@
             padding: 10px 16px;
 
             font-size: 14px;
+
             font-weight: 600;
 
             cursor: pointer;
+
         }
+
 
         .nav-button:active {
+
             opacity: 0.7;
+
         }
+
 
         .nav-button.primary {
+
             background: var(--blue);
+
             color: white;
+
         }
+
 
         .nav-button:disabled {
+
             opacity: 0.35;
+
             cursor: default;
+
         }
 
-        /* =========================
+
+        .nav-button i {
+
+            margin-right: 5px;
+
+        }
+
+
+        /* =========================================
            PAGE COUNTER
-        ========================= */
+        ========================================= */
 
         .page-counter {
+
             text-align: center;
+
             color: var(--hint);
+
             font-size: 12px;
+
             margin-top: 18px;
+
         }
 
-        /* =========================
+
+        /* =========================================
            MOBILE
-        ========================= */
+        ========================================= */
 
         @media (max-width: 480px) {
 
             .container {
+
                 padding-left: 12px;
+
                 padding-right: 12px;
+
             }
+
 
             .bot-card {
+
                 padding: 13px;
+
             }
+
 
             .open-button {
-                padding: 8px 10px;
+
+                padding:
+                    8px
+                    10px;
+
             }
+
 
             .navigation {
+
                 height: 64px;
+
             }
 
+
             .nav-button {
-                padding: 9px 13px;
+
+                padding:
+                    9px
+                    13px;
+
             }
+
         }
 
     </style>
+
 </head>
+
 
 <body>
 
+
+<!-- =========================================
+     HEADER
+========================================== -->
+
 <header>
-    <div id="page-title">Telegram Neural Network Bot</div>
+
+    <div id="page-title">
+        Telegram Bot Hub
+    </div>
+
 </header>
 
+
+
+<!-- =========================================
+     CONTENT
+========================================== -->
 
 <div class="container">
 
 
-    <!-- =========================================
+    <!-- =====================================
          HOME PAGE
-    ========================================== -->
+    ====================================== -->
 
-    <div id="home-page" class="page active">
+    <div id="home-page"
+         class="page active">
+
 
         <div class="intro">
 
@@ -323,7 +555,7 @@
             </div>
 
             <div class="intro-title">
-                AI Photos & Videos Edit Bots
+                Telegram Bot Hub
             </div>
 
             <div class="intro-description">
@@ -333,183 +565,33 @@
         </div>
 
 
-        <!-- BOT LIST 1 -->
+        <!-- Categories are loaded from bots.js -->
 
-        <div class="list-card"
-             onclick="openList(1)">
+        <div id="category-container"></div>
 
-            <div class="list-left">
-
-                <div class="list-icon">
-                    🤖
-                </div>
-
-                <div>
-
-                    <div class="list-name">
-                        Bot List 1
-                    </div>
-
-                    <div class="list-description">
-                        General utility and productivity bots.
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="arrow">
-                ›
-            </div>
-
-        </div>
-
-
-        <!-- BOT LIST 2 -->
-
-        <div class="list-card"
-             onclick="openList(2)">
-
-            <div class="list-left">
-
-                <div class="list-icon">
-                    🎮
-                </div>
-
-                <div>
-
-                    <div class="list-name">
-                        Bot List 2
-                    </div>
-
-                    <div class="list-description">
-                        Entertainment and gaming bots.
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="arrow">
-                ›
-            </div>
-
-        </div>
-
-
-        <!-- BOT LIST 3 -->
-
-        <div class="list-card"
-             onclick="openList(3)">
-
-            <div class="list-left">
-
-                <div class="list-icon">
-                    🛠️
-                </div>
-
-                <div>
-
-                    <div class="list-name">
-                        Bot List 3
-                    </div>
-
-                    <div class="list-description">
-                        Tools, converters, and useful services.
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="arrow">
-                ›
-            </div>
-
-        </div>
-
-
-        <!-- BOT LIST 4 -->
-
-        <div class="list-card"
-             onclick="openList(4)">
-
-            <div class="list-left">
-
-                <div class="list-icon">
-                    📱
-                </div>
-
-                <div>
-
-                    <div class="list-name">
-                        Bot List 4
-                    </div>
-
-                    <div class="list-description">
-                        Media, downloads, and content bots.
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="arrow">
-                ›
-            </div>
-
-        </div>
-
-
-        <!-- BOT LIST 5 -->
-
-        <div class="list-card"
-             onclick="openList(5)">
-
-            <div class="list-left">
-
-                <div class="list-icon">
-                    ⭐
-                </div>
-
-                <div>
-
-                    <div class="list-name">
-                        Bot List 5
-                    </div>
-
-                    <div class="list-description">
-                        Featured and recommended bots.
-                    </div>
-
-                </div>
-
-            </div>
-
-            <div class="arrow">
-                ›
-            </div>
-
-        </div>
 
     </div>
 
 
 
-    <!-- =========================================
-         BOT LIST PAGE
-    ========================================== -->
+    <!-- =====================================
+         BOT PAGE
+    ====================================== -->
 
-    <div id="bot-page" class="page">
+    <div id="bot-page"
+         class="page">
 
-        <div id="bot-list-container">
-            <!-- Bots are inserted here using JavaScript -->
+
+        <div id="bot-list-container"></div>
+
+
+        <div id="page-counter"
+             class="page-counter">
         </div>
 
-        <div class="page-counter" id="page-counter">
-        </div>
 
     </div>
+
 
 </div>
 
@@ -521,12 +603,14 @@
 
 <div class="navigation">
 
+
     <button
         id="back-button"
         class="nav-button"
         onclick="goBack()">
 
-        <<==
+        <i class="fa fa-angle-double-left"></i>
+        Back
 
     </button>
 
@@ -536,6 +620,7 @@
         class="nav-button primary"
         onclick="goHome()">
 
+        <i class="fa fa-home"></i>
         Home
 
     </button>
@@ -546,317 +631,172 @@
         class="nav-button"
         onclick="goForward()">
 
-        ==>>
+        Forward
+        <i class="fa fa-angle-double-right"></i>
 
     </button>
+
 
 </div>
 
 
 
+<!-- =========================================
+     LOAD BOT CONFIGURATION
+========================================== -->
+
+<script src="bots.js"></script>
+
+
+
 <script>
 
-/* =========================================================
-   BOT DATA
-   =========================================================
-
-   CHANGE THE BOT NAMES, DESCRIPTIONS AND LINKS BELOW.
-
-   You can have UP TO 6 bots in each list.
-
-   Example Telegram link:
-
-   https://t.me/BotUsername
-
-   ========================================================= */
-
-
-const botLists = {
-
-    1: {
-
-        title: "Bot List 1",
-
-        bots: [
-
-            {
-                name: "Bot 1",
-                description: "Description for Telegram Bot 1.",
-                link: "https://t.me/YourBot1"
-            },
-
-            {
-                name: "Bot 2",
-                description: "Description for Telegram Bot 2.",
-                link: "https://t.me/YourBot2"
-            },
-
-            {
-                name: "Bot 3",
-                description: "Description for Telegram Bot 3.",
-                link: "https://t.me/YourBot3"
-            },
-
-            {
-                name: "Bot 4",
-                description: "Description for Telegram Bot 4.",
-                link: "https://t.me/YourBot4"
-            },
-
-            {
-                name: "Bot 5",
-                description: "Description for Telegram Bot 5.",
-                link: "https://t.me/YourBot5"
-            },
-
-            {
-                name: "Bot 6",
-                description: "Description for Telegram Bot 6.",
-                link: "https://t.me/YourBot6"
-            }
-
-        ]
-
-    },
-
-
-    2: {
-
-        title: "Bot List 2",
-
-        bots: [
-
-            {
-                name: "Bot 1",
-                description: "Description for Telegram Bot 1.",
-                link: "https://t.me/YourBot1"
-            },
-
-            {
-                name: "Bot 2",
-                description: "Description for Telegram Bot 2.",
-                link: "https://t.me/YourBot2"
-            },
-
-            {
-                name: "Bot 3",
-                description: "Description for Telegram Bot 3.",
-                link: "https://t.me/YourBot3"
-            },
-
-            {
-                name: "Bot 4",
-                description: "Description for Telegram Bot 4.",
-                link: "https://t.me/YourBot4"
-            },
-
-            {
-                name: "Bot 5",
-                description: "Description for Telegram Bot 5.",
-                link: "https://t.me/YourBot5"
-            },
-
-            {
-                name: "Bot 6",
-                description: "Description for Telegram Bot 6.",
-                link: "https://t.me/YourBot6"
-            }
-
-        ]
-
-    },
-
-
-    3: {
-
-        title: "Bot List 3",
-
-        bots: [
-
-            {
-                name: "Bot 1",
-                description: "Description for Telegram Bot 1.",
-                link: "https://t.me/YourBot1"
-            },
-
-            {
-                name: "Bot 2",
-                description: "Description for Telegram Bot 2.",
-                link: "https://t.me/YourBot2"
-            },
-
-            {
-                name: "Bot 3",
-                description: "Description for Telegram Bot 3.",
-                link: "https://t.me/YourBot3"
-            },
-
-            {
-                name: "Bot 4",
-                description: "Description for Telegram Bot 4.",
-                link: "https://t.me/YourBot4"
-            },
-
-            {
-                name: "Bot 5",
-                description: "Description for Telegram Bot 5.",
-                link: "https://t.me/YourBot5"
-            },
-
-            {
-                name: "Bot 6",
-                description: "Description for Telegram Bot 6.",
-                link: "https://t.me/YourBot6"
-            }
-
-        ]
-
-    },
-
-
-    4: {
-
-        title: "Bot List 4",
-
-        bots: [
-
-            {
-                name: "Bot 1",
-                description: "Description for Telegram Bot 1.",
-                link: "https://t.me/YourBot1"
-            },
-
-            {
-                name: "Bot 2",
-                description: "Description for Telegram Bot 2.",
-                link: "https://t.me/YourBot2"
-            },
-
-            {
-                name: "Bot 3",
-                description: "Description for Telegram Bot 3.",
-                link: "https://t.me/YourBot3"
-            },
-
-            {
-                name: "Bot 4",
-                description: "Description for Telegram Bot 4.",
-                link: "https://t.me/YourBot4"
-            },
-
-            {
-                name: "Bot 5",
-                description: "Description for Telegram Bot 5.",
-                link: "https://t.me/YourBot5"
-            },
-
-            {
-                name: "Bot 6",
-                description: "Description for Telegram Bot 6.",
-                link: "https://t.me/YourBot6"
-            }
-
-        ]
-
-    },
-
-
-    5: {
-
-        title: "Bot List 5",
-
-        bots: [
-
-            {
-                name: "Bot 1",
-                description: "Description for Telegram Bot 1.",
-                link: "https://t.me/YourBot1"
-            },
-
-            {
-                name: "Bot 2",
-                description: "Description for Telegram Bot 2.",
-                link: "https://t.me/YourBot2"
-            },
-
-            {
-                name: "Bot 3",
-                description: "Description for Telegram Bot 3.",
-                link: "https://t.me/YourBot3"
-            },
-
-            {
-                name: "Bot 4",
-                description: "Description for Telegram Bot 4.",
-                link: "https://t.me/YourBot4"
-            },
-
-            {
-                name: "Bot 5",
-                description: "Description for Telegram Bot 5.",
-                link: "https://t.me/YourBot5"
-            },
-
-            {
-                name: "Bot 6",
-                description: "Description for Telegram Bot 6.",
-                link: "https://t.me/YourBot6"
-            }
-
-        ]
-
-    }
-
-};
-
-
-
-/* =========================================================
-   CURRENT PAGE
-   ========================================================= */
+/* =====================================================
+   CURRENT LIST
+===================================================== */
 
 let currentList = 0;
 
 
-/* =========================================================
-   OPEN BOT LIST
-   ========================================================= */
+/* =====================================================
+   CREATE CATEGORY LIST
+===================================================== */
+
+function createCategories() {
+
+    const container =
+        document.getElementById(
+            "category-container"
+        );
+
+
+    container.innerHTML = "";
+
+
+    Object.keys(botLists).forEach(function(key) {
+
+        const list =
+            botLists[key];
+
+
+        const card =
+            document.createElement("div");
+
+
+        card.className =
+            "list-card";
+
+
+        card.onclick = function() {
+
+            openList(Number(key));
+
+        };
+
+
+        card.innerHTML = `
+
+            <div class="list-left">
+
+                <div class="list-icon">
+                    ${list.icon || "🤖"}
+                </div>
+
+                <div>
+
+                    <div class="list-name">
+                        ${list.title}
+                    </div>
+
+                    <div class="list-description">
+                        ${list.description || ""}
+                    </div>
+
+                </div>
+
+            </div>
+
+            <div class="arrow">
+                <i class="fa fa-angle-right"></i>
+            </div>
+
+        `;
+
+
+        container.appendChild(card);
+
+    });
+
+}
+
+
+
+/* =====================================================
+   OPEN LIST
+===================================================== */
 
 function openList(listNumber) {
 
-    currentList = listNumber;
+    currentList =
+        listNumber;
 
     showBotPage();
 
 }
 
 
-/* =========================================================
-   DISPLAY BOT PAGE
-   ========================================================= */
+
+/* =====================================================
+   SHOW BOT PAGE
+===================================================== */
 
 function showBotPage() {
 
     const homePage =
-        document.getElementById("home-page");
+        document.getElementById(
+            "home-page"
+        );
+
 
     const botPage =
-        document.getElementById("bot-page");
+        document.getElementById(
+            "bot-page"
+        );
+
 
     const title =
-        document.getElementById("page-title");
+        document.getElementById(
+            "page-title"
+        );
+
 
     const container =
-        document.getElementById("bot-list-container");
+        document.getElementById(
+            "bot-list-container"
+        );
 
 
-    homePage.classList.remove("active");
+    homePage.classList.remove(
+        "active"
+    );
 
-    botPage.classList.add("active");
+
+    botPage.classList.add(
+        "active"
+    );
 
 
     const list =
         botLists[currentList];
+
+
+    if (!list) {
+
+        goHome();
+
+        return;
+
+    }
 
 
     title.textContent =
@@ -869,7 +809,10 @@ function showBotPage() {
     list.bots.forEach(function(bot) {
 
         const card =
-            document.createElement("div");
+            document.createElement(
+                "div"
+            );
+
 
         card.className =
             "bot-card";
@@ -884,7 +827,7 @@ function showBotPage() {
                 </div>
 
                 <div class="bot-description">
-                    ${bot.description}
+                    ${bot.description || ""}
                 </div>
 
             </div>
@@ -892,7 +835,8 @@ function showBotPage() {
             <a
                 class="open-button"
                 href="${bot.link}"
-                target="_blank">
+                target="_blank"
+                rel="noopener">
 
                 Open ↗
 
@@ -901,13 +845,26 @@ function showBotPage() {
         `;
 
 
-        container.appendChild(card);
+        container.appendChild(
+            card
+        );
 
     });
 
 
-    document.getElementById("page-counter").textContent =
-        "Bot List " + currentList + " of 5";
+    const totalLists =
+        Object.keys(botLists).length;
+
+
+    document
+        .getElementById(
+            "page-counter"
+        )
+        .textContent =
+            "Bot List " +
+            currentList +
+            " of " +
+            totalLists;
 
 
     updateNavigation();
@@ -915,25 +872,40 @@ function showBotPage() {
 }
 
 
-/* =========================================================
+
+/* =====================================================
    HOME
-   ========================================================= */
+===================================================== */
 
 function goHome() {
 
     currentList = 0;
 
-    document
-        .getElementById("bot-page")
-        .classList.remove("active");
 
     document
-        .getElementById("home-page")
-        .classList.add("active");
+        .getElementById(
+            "bot-page"
+        )
+        .classList.remove(
+            "active"
+        );
 
 
-    document.getElementById("page-title").textContent =
-        "Neural Nework Bot";
+    document
+        .getElementById(
+            "home-page"
+        )
+        .classList.add(
+            "active"
+        );
+
+
+    document
+        .getElementById(
+            "page-title"
+        )
+        .textContent =
+            "Telegram Bot Hub";
 
 
     updateNavigation();
@@ -941,9 +913,10 @@ function goHome() {
 }
 
 
-/* =========================================================
+
+/* =====================================================
    BACK
-   ========================================================= */
+===================================================== */
 
 function goBack() {
 
@@ -970,11 +943,16 @@ function goBack() {
 }
 
 
-/* =========================================================
+
+/* =====================================================
    FORWARD
-   ========================================================= */
+===================================================== */
 
 function goForward() {
+
+    const totalLists =
+        Object.keys(botLists).length;
+
 
     if (currentList === 0) {
 
@@ -985,7 +963,7 @@ function goForward() {
     }
 
 
-    if (currentList < 5) {
+    if (currentList < totalLists) {
 
         currentList++;
 
@@ -996,50 +974,51 @@ function goForward() {
 }
 
 
-/* =========================================================
-   UPDATE NAVIGATION BUTTONS
-   ========================================================= */
+
+/* =====================================================
+   UPDATE NAVIGATION
+===================================================== */
 
 function updateNavigation() {
 
     const backButton =
-        document.getElementById("back-button");
+        document.getElementById(
+            "back-button"
+        );
+
 
     const forwardButton =
-        document.getElementById("forward-button");
+        document.getElementById(
+            "forward-button"
+        );
 
 
-    if (currentList === 0) {
-
-        backButton.disabled = true;
-
-    } else {
-
-        backButton.disabled = false;
-
-    }
+    const totalLists =
+        Object.keys(botLists).length;
 
 
-    if (currentList >= 5) {
+    backButton.disabled =
+        currentList === 0;
 
-        forwardButton.disabled = true;
 
-    } else {
-
-        forwardButton.disabled = false;
-
-    }
+    forwardButton.disabled =
+        currentList >= totalLists;
 
 }
 
 
-/* =========================================================
+
+/* =====================================================
    INITIALIZE
-   ========================================================= */
+===================================================== */
+
+createCategories();
 
 updateNavigation();
 
 </script>
 
+
 </body>
+
 </html>
