@@ -21,7 +21,7 @@ const botLists = {
 
     1: {
 
-        title: "🌶 Cl✰th✰ff Bots Links",
+        title: "Cl✰th✰ff Bots Links",
         icon: "🍑",
         description: "Best Bots for Photo and Videos Editing",
 
@@ -29,13 +29,13 @@ const botLists = {
 
             {
                 name: "FotoX",
-                description: "Professional Photo and Video Bot",
+                description: "#1 Adult Video Generator. Free Trial, No Sign-Up.",
                 link: "https://fotox.io/?ref=db6c6d23"
             },
 
             {
                 name: "PlayBox",
-                description: "Video Editing Bot",
+                description: "Transform Your Photos Into Stunning AI-Powered Videos.",
                 link: "https://www.playbox.com/?ref=Ar803"
             },
 
@@ -217,7 +217,7 @@ const botLists = {
     4: {
 
         title: "Bot List 4",
-        icon: "🌶",
+        icon: "🍓",
         description: "Media, downloads, and content bots.",
 
         bots: [
@@ -335,7 +335,7 @@ const botLists = {
     6: {
 
         title: "Bot List 6",
-        icon: "👤",
+        icon: "📞",
         description: "Automation and developer bots.",
 
         bots: [
