@@ -29,50 +29,50 @@ const botLists = {
 
             {
                 name: "FotoX",
-                description: "#1 Adult Video Generator. Free Trial, No Sign-Up.",
+                description: "#1 Adult Video Generator. AI-Powered.",
                 link: "https://fotox.io/?ref=db6c6d23"
             },
 
             {
                 name: "PlayBox",
-                description: "Transform Your Photos Into Stunning AI-Powered Videos.",
+                description: "Transform Ur Photos Into Stunning Videos.",
                 link: "https://www.playbox.com/?ref=Ar803"
             },
 
             {
-                name: "UnDress Bot",
-                description: "Professional Photo and Video Bot",
-                link: "https://telegram.me/Nrbr1udddbobot?start=ref_5700146507"
+                name: "Pure Nude",
+                description: "#1 Best Professional Photo & Video Bot.",
+                link: "https://t.me/my3ontr3e_bot?start=5700146507"
             },
 
             {
                 name: "Moonlit Lounge",
-                description: "Description for Telegram Bot 4.",
-                link: "https://telegram.me/Khattt008865_bot?start=l_ERDQGg1E"
+                description: "#1 Good Professional Photo & Video Bot.",
+                link: "https://t.me/manfavor_bot?start=l_M8NKw2LX"
             },
 
             {
                 name: "AI Sparks",
-                description: "Description for Telegram Bot 5.",
+                description: "Create Sparkling AI Videos From Photos!",
                 link: "https://t.me/AnimateYourPhotosBot?start=ref_4ASMNFSY"
             },
 
             {
                 name: "SHY Bot",
-                description: "Description for Telegram Bot 6.",
-                link: "https://telegram.me/CA7TYLNRbot?start=a7rpMf"
+                description: "#Best Video Generation Bot, AI Powered.",
+                link: "https://t.me/Charx4RebOT?start=a7rpMf"
             },
 
             {
-                name: "Pure Nude",
-                description: "Description for Telegram Bot 7.",
-                link: "https://t.me/mype9glx_bot?start=5700146507"
+                name: "UDress Bot",
+                description: "AI will Turn It Into Something Polished.",
+                link: "https://t.me/Nrbr1udddbobot?start=ref_5700146507"
             },
 
             {
                 name: "Nage AI Bot",
-                description: "Description for Telegram Bot 10.",
-                link: "https://telegram.me/chatgpt_ai_images_39961bot?start=5700146507"
+                description: "Your Ultimate Image & Video Nude Creator",
+                link: "https://t.me/chatgpt_ai_images_39961bot?start=5700146507"
             }
 
         ]
@@ -88,20 +88,20 @@ const botLists = {
 
         title: "Bot List 2",
         icon: "🥝",
-        description: "Entertainment and gaming bots.",
+        description: "Entertainment and Video Bots.",
 
         bots: [
 
             {
-                name: "Bot 1",
+                name: "Max U✰Dr✰sser",
                 description: "Description for Telegram Bot 1.",
-                link: "https://t.me/YourBot1"
+                link: "https://t.me/aiimg23bot?start=D5L3t3zm"
             },
 
             {
-                name: "Bot 2",
+                name: "Satisfactory",
                 description: "Description for Telegram Bot 2.",
-                link: "https://t.me/YourBot2"
+                link: "https://t.me/BadiAmaaneeBot?start=ref_5700146507"
             },
 
             {
