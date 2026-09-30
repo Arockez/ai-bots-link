@@ -42,13 +42,13 @@ const botLists = {
             {
                 name: "Pure Nude",
                 description: "#1 Best Professional Photo & Video Bot.",
-                link: "https://t.me/my3ontr3e_bot?start=5700146507"
+                link: "https://nude.fotox.app/tg?start=5700146507"
             },
 
             {
                 name: "Moonlit Lounge",
                 description: "#1 Good Professional Photo & Video Bot.",
-                link: "https://t.me/manfavor_bot?start=l_M8NKw2LX"
+                link: "https://link.nudify.systems/?r=NTcwMDE0NjUwN0meKuQ"
             },
 
             {
@@ -66,7 +66,7 @@ const botLists = {
             {
                 name: "UDress Bot",
                 description: "AI will Turn It Into Something Polished.",
-                link: "https://t.me/Nrbr1udddbobot?start=ref_5700146507"
+                link: "https://udrezzbot.com/5700146507"
             },
 
             {
