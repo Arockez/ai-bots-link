@@ -130,13 +130,13 @@ const botLists = {
 
             {
                 name: "Satisfactory",
-                description: "#1 Ultimate Image & Video Nu✰e Creator.",
+                description: "#1 Ultimate Image & Video Nu✰es Creator.",
                 link: "https://telegram.me/Fantasiaxbot?start=ref_5700146507"
             },
 
             {
                 name: "18xAI Bot",
-                description: "#No.1 Adult Video Generator AI-Powered.",
+                description: "#No.1 Adult Videos Generator AI-Powered.",
                 link: "https://t.me/xAI18_robot/apps?startapp=6dLeuT"
             }
 
