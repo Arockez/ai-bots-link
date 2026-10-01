@@ -159,13 +159,13 @@ const botLists = {
 
             {
                 name: "AI Sparks Slight Bot",
-                description: "Create Sparkling AI Videos From Photos..!!",
+                description: "Create Sparkling AI Videos From Photo..!!",
                 link: "https://t.me/AnimateMyPhotosBot?start=ref_4ASMNFSY"
             },
 
             {
                 name: "Vixal AI Bot",
-                description: "Transform Photos Into #AI MasterPieces.!!",
+                description: "Transform Photos Into AI MasterPieces.!!",
                 link: "https://telegram.me/VixalAIImg2_bot?start=5700146507"
             },
 
@@ -183,7 +183,7 @@ const botLists = {
 
             {
                 name: "AI Edit Bot",
-                description: "Transform Photos Into #AI MasterPieces.!!",
+                description: "Transform Photos Into AI MasterPieces.!!",
                 link: "https://t.me/Wkwkibot?start=5700146507"
             },
 
