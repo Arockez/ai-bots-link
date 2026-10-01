@@ -41,25 +41,25 @@ const botLists = {
 
             {
                 name: "Pixel Edit Bot Pro",
-                description: "#1 Good Professional Photos & Video Bot",
+                description: "#1 Good Professional Photos & Video Bot.",
                 link: "https://telegram.me/Unidresbot?start=5700146507"
             },
 
             {
                 name: "Remove Shirt Bot",
-                description: "#1 Good Professional Photos & Video Bot",
+                description: "#1 Good Professional Photos & Video Bot.",
                 link: "https://telegram.me/purepic_bot?start=5700146507"
             },
 
             {
                 name: "Easy AI Photo Bot",
-                description: "#1 Good Professional Photos & Video Bot",
+                description: "#1 Good Professional Photos & Video Bot.",
                 link: "https://telegram.me/micvaibot?start=5700146507"
             },
 
             {
                 name: "Photo Magic Pro Bot",
-                description: "#1 Good Professional Photos & Video Bot",
+                description: "#1 Good Professional Photos & Video Bot.",
                 link: "https://telegram.me/Goldlightbsc_bot?start=5700146507"
             },
 
@@ -94,7 +94,7 @@ const botLists = {
 
             {
                 name: "Deep AI Video Entry",
-                description: "#1st Ultimate Image & Video Nude Creator",
+                description: "#1 Ultimate Image & Video Nu✰e Creator.",
                 link: "https://deepaivideopro.com/i/k8g1RuwxEo"
             },
 
@@ -106,7 +106,7 @@ const botLists = {
 
             {
                 name: "MaxUnDress",
-                description: "#AI Turns Photos Into Pure Magic Photos.!",
+                description: "#AI Turns Photos Into Pure Magic Photos.",
                 link: "https://telegram.me/aiimg23bot?start=D5L3t3zm"
             },
 
@@ -124,13 +124,13 @@ const botLists = {
 
             {
                 name: "Moonlit Lounge",
-                description: "Transform Photos Into #AI MasterPieces.!!",
+                description: "Transform Photos Into AI MasterPieces..!!",
                 link: "https://telegram.me/undressth69_bot?start=l_JL96Booe"
             },
 
             {
                 name: "Satisfactory",
-                description: "#1st Ultimate Image & Video Nude Creator",
+                description: "#1 Ultimate Image & Video Nu✰e Creator.",
                 link: "https://telegram.me/Fantasiaxbot?start=ref_5700146507"
             },
 
