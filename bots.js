@@ -23,7 +23,7 @@ const botLists = {
 
         title: "Cl✰thO✰✰ Bots Links",
         icon: "🍑",
-        description: "Best Bots for Photo and Videos Editing",
+        description: "Cl✰thO✰✰ Bot Photos & Videos Editing",
 
         bots: [
 
@@ -88,55 +88,55 @@ const botLists = {
 
         title: "Pu✰eNu✰e Bots Links",
         icon: "🥝",
-        description: "Best Pu✰e Nu✰e Bots for Photo & Videos",
+        description: "Best Pu✰eNu✰e Bot for Photo & Videos",
 
         bots: [
 
             {
                 name: "Deep AI Video Entry",
-                description: "Description for Telegram Bot 1.",
+                description: "#1st Ultimate Image & Video Nude Creator",
                 link: "https://deepaivideopro.com/i/k8g1RuwxEo"
             },
 
             {
                 name: "UDress Bot",
-                description: "Description for Telegram Bot 2.",
+                description: "Create Stunning Videos From Any Photos.",
                 link: "https://telegram.me/Nrbr1udddbobot?start=ref_5700146507"
             },
 
             {
                 name: "MaxUnDress",
-                description: "Description for Telegram Bot 3.",
+                description: "#AI Turns Photos Into Pure Magic Photos.!",
                 link: "https://telegram.me/aiimg23bot?start=D5L3t3zm"
             },
 
             {
                 name: "Mira AI",
-                description: "Description for Telegram Bot 4.",
+                description: "Creating Cinematic #AI Videos Instantly.!!",
                 link: "https://t.me/MiraGenerationBot?start=ref_5700146507"
             },
 
             {
                 name: "NageAI Bot",
-                description: "Description for Telegram Bot 5.",
+                description: "Turn Ur Images Into Amazing AI Videos..!!",
                 link: "https://telegram.me/chatgpt_ai_images_6360bot?start=5700146507"
             },
 
             {
                 name: "Moonlit Lounge",
-                description: "Description for Telegram Bot 6.",
+                description: "Transform Photos Into #AI MasterPieces.!!",
                 link: "https://telegram.me/undressth69_bot?start=l_JL96Booe"
             },
 
             {
                 name: "Satisfactory",
-                description: "Description for Telegram Bot 7.",
+                description: "#1st Ultimate Image & Video Nude Creator",
                 link: "https://telegram.me/Fantasiaxbot?start=ref_5700146507"
             },
 
             {
                 name: "18xAI Bot",
-                description: "Description for Telegram Bot 10.",
+                description: "#No.1 Adult Video Generator AI-Powered.",
                 link: "https://t.me/xAI18_robot/apps?startapp=6dLeuT"
             }
 
@@ -153,55 +153,55 @@ const botLists = {
 
         title: "D✰epFa✰e Bots Links",
         icon: "🍒",
-        description: "Deep F✰ke You Crush Photos & Videos",
+        description: "D✰epF✰ke Your Crush Photos & Videos",
 
         bots: [
 
             {
                 name: "AI Sparks Slight Bot",
-                description: "Description for Telegram Bot 1.",
+                description: "Create Sparkling AI Videos From Photos..!!",
                 link: "https://t.me/AnimateMyPhotosBot?start=ref_4ASMNFSY"
             },
 
             {
                 name: "Vixal AI Bot",
-                description: "Description for Telegram Bot 2.",
+                description: "Transform Photos Into #AI MasterPieces.!!",
                 link: "https://telegram.me/VixalAIImg2_bot?start=5700146507"
             },
 
             {
                 name: "Hot Dreams Bot",
-                description: "Description for Telegram Bot 3.",
+                description: "#1 Good Professional Photos & Video Bot.",
                 link: "https://t.me/hot_dr3ams_bot?start=5700146507"
             },
 
             {
                 name: "BOTY",
-                description: "Description for Telegram Bot 4.",
+                description: "Create Stunning Videos From Any Photos.",
                 link: "https://t.me/B0ty3Bot?start=refv_F138A760886EAF58796712F14C03F2CF"
             },
 
             {
                 name: "AI Edit Bot",
-                description: "Description for Telegram Bot 5.",
+                description: "Transform Photos Into #AI MasterPieces.!!",
                 link: "https://t.me/Wkwkibot?start=5700146507"
             },
 
             {
                 name: "Best AI Edit Bot",
-                description: "Description for Telegram Bot 6.",
+                description: "#One Photo with Endless AI Possibilities.!",
                 link: "https://t.me/Wofxibot?start=5700146507"
             },
 
             {
                 name: "AI Image & AI Video",
-                description: "Description for Telegram Bot 7.",
+                description: "Turn Ur Images Into Amazing AI Videos..!!",
                 link: "https://telegram.me/ai_image222bot?start=5700146507"
             },
 
             {
                 name: "AI Draw",
-                description: "Description for Telegram Bot 10.",
+                description: "#AI Turns Photos Into Pure Magic Photos.",
                 link: "https://t.me/aidraw_8_bot?start=5700146507"
             }
 
@@ -218,55 +218,55 @@ const botLists = {
 
         title: "U✰Dress✰r Bots Links",
         icon: "🍓",
-        description: "UnDress Media with Amazing Styles",
+        description: "AI Media U✰Dress✰r with Amazing Style",
 
         bots: [
 
             {
                 name: "Video Generator",
-                description: "Description for Telegram Bot 1.",
+                description: "Turn Ur Images Into Amazing AI Videos..!!",
                 link: "https://telegram.me/GeneratorAiBotVideo_Bot"
             },
 
             {
                 name: "PlayBox",
-                description: "Description for Telegram Bot 2.",
+                description: "#No.1 Adult Video Generator AI-Powered.",
                 link: "https://www.playbox.com/?ref=Ar803"
             },
 
             {
                 name: "Bot 3",
-                description: "Description for Telegram Bot 3.",
+                description: "#1 Good Professional Photos & Video Bot",
                 link: "https://t.me/YourBot3"
             },
 
             {
                 name: "Bot 4",
-                description: "Description for Telegram Bot 4.",
+                description: "#Best Video Generation Bot, AI Powered.!!",
                 link: "https://t.me/YourBot4"
             },
 
             {
                 name: "Bot 5",
-                description: "Description for Telegram Bot 5.",
+                description: "#1st Ultimate Image & Video Nude Creator",
                 link: "https://t.me/YourBot5"
             },
 
             {
                 name: "Bot 6",
-                description: "Description for Telegram Bot 6.",
+                description: "Turn Crush Photos Into Stunning AI Video",
                 link: "https://t.me/YourBot6"
             },
 
             {
                 name: "Bot 7",
-                description: "Description for Telegram Bot 7.",
+                description: "Dress Ur Beauty ReImagined by AI-Power",
                 link: "https://t.me/YourBot7"
             },
 
             {
                 name: "Bot 10",
-                description: "Description for Telegram Bot 10.",
+                description: "Create Stunning Videos From Any Photos",
                 link: "https://t.me/YourBot10"
             }
 
