@@ -189,7 +189,7 @@ const botLists = {
 
             {
                 name: "Best AI Edit Bot",
-                description: "#One Photo with Endless AI Possibilities.!",
+                description: "#One Photo with Endless AI Possibilities.!!",
                 link: "https://t.me/Wofxibot?start=5700146507"
             },
 
@@ -248,25 +248,25 @@ const botLists = {
 
             {
                 name: "Bot 5",
-                description: "#1st Ultimate Image & Video Nude Creator",
+                description: "#1 Ultimate Image & Video Nu✰e Creator.",
                 link: "https://t.me/YourBot5"
             },
 
             {
                 name: "Bot 6",
-                description: "Turn Crush Photos Into Stunning AI Video",
+                description: "Turn Crush Photos Into Stunning AI Video.",
                 link: "https://t.me/YourBot6"
             },
 
             {
                 name: "Bot 7",
-                description: "Dress Ur Beauty ReImagined by AI-Power",
+                description: "Dress Beauty Re-Imagined by AI-Power..!!",
                 link: "https://t.me/YourBot7"
             },
 
             {
                 name: "Bot 10",
-                description: "Create Stunning Videos From Any Photos",
+                description: "Create Stunning Videos From Any Photos.",
                 link: "https://t.me/YourBot10"
             }
 
