@@ -230,13 +230,13 @@ const botLists = {
 
             {
                 name: "PlayBox",
-                description: "#No.1 Adult Video Generator AI-Powered.",
+                description: "#No.1 Adult Videos Generator AI-Powered.",
                 link: "https://www.playbox.com/?ref=Ar803"
             },
 
             {
                 name: "Bot 3",
-                description: "#1 Good Professional Photos & Video Bot",
+                description: "#1 Good Professional Photos & Video Bot.",
                 link: "https://t.me/YourBot3"
             },
 
