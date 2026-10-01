@@ -21,7 +21,7 @@ const botLists = {
 
     1: {
 
-        title: "Cl✰th ✰ff Bots Links",
+        title: "Cl✰thO✰✰ Bots Links",
         icon: "🍑",
         description: "Best Bots for Photo and Videos Editing",
 
@@ -29,49 +29,49 @@ const botLists = {
 
             {
                 name: "FotoX",
-                description: "#1 Adult Video Generator. AI-Powered.",
+                description: "#Best AI-Powered Photo to Video Magic.!!",
                 link: "https://fotox.io/?ref=db6c6d23"
             },
 
             {
                 name: "Pu✰e Nu✰e",
-                description: "Transform Photos Into Stunning Videos.",
+                description: "#No.1 Best Professional AI Photo & Video.",
                 link: "https://t.me/my3ontr3e_bot?start=5700146507"
             },
 
             {
                 name: "Pixel Edit Bot Pro",
-                description: "#1 Best Professional Photo & Video Bot.",
+                description: "#1 Good Professional Photos & Video Bot",
                 link: "https://telegram.me/Unidresbot?start=5700146507"
             },
 
             {
                 name: "Remove Shirt Bot",
-                description: "#1 Good Professional Photo & Video Bot.",
+                description: "#1 Good Professional Photos & Video Bot",
                 link: "https://telegram.me/purepic_bot?start=5700146507"
             },
 
             {
                 name: "Easy AI Photo Bot",
-                description: "Create Sparkling AI Videos From Photos!",
+                description: "#1 Good Professional Photos & Video Bot",
                 link: "https://telegram.me/micvaibot?start=5700146507"
             },
 
             {
                 name: "Photo Magic Pro Bot",
-                description: "#Best Video Generation Bot, AI Powered.",
+                description: "#1 Good Professional Photos & Video Bot",
                 link: "https://telegram.me/Goldlightbsc_bot?start=5700146507"
             },
 
             {
                 name: "UndressLab.AI",
-                description: "AI will Turn It Into Something Polished.",
+                description: "#One Photo with Endless AI Possibilities.!!",
                 link: "https://t.me/Despir_Foto_Pro_Bot?start=ref_087326b04c"
             },
 
             {
                 name: "SHY / ShirtUp Bot",
-                description: "Your Ultimate Image & Video Nude Creator",
+                description: "#Best Video Generation Bot, AI Powered.!!",
                 link: "https://telegram.me/Vnrzz12yBot?start=a7rpMf"
             }
 
@@ -86,7 +86,7 @@ const botLists = {
 
     2: {
 
-        title: "Pu✰e Nu✰e Bots Links",
+        title: "Pu✰eNu✰e Bots Links",
         icon: "🥝",
         description: "Best Pu✰e Nu✰e Bots for Photo & Videos",
 
@@ -151,7 +151,7 @@ const botLists = {
 
     3: {
 
-        title: "Deep F✰ke Bots Links",
+        title: "D✰epFa✰e Bots Links",
         icon: "🍒",
         description: "Deep F✰ke You Crush Photos & Videos",
 
@@ -216,7 +216,7 @@ const botLists = {
 
     4: {
 
-        title: "UnDr✰ss Bots Links",
+        title: "U✰Dress✰r Bots Links",
         icon: "🍓",
         description: "UnDress Media with Amazing Styles",
 
