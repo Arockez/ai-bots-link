@@ -281,9 +281,9 @@ const botLists = {
 
     5: {
 
-        title: "Bot List 5",
+        title: "Supports & Donations",
         icon: "⭐",
-        description: "Featured and useful Telegram bots.",
+        description: "Support Our Work with a Small Donations",
 
         bots: [
 
@@ -334,9 +334,9 @@ const botLists = {
 
     6: {
 
-        title: "Bot List 6",
+        title: "Bots Contact Channels",
         icon: "📞",
-        description: "Automation and developer bots.",
+        description: "Explore & Join Growing Channel Networks",
 
         bots: [
 
