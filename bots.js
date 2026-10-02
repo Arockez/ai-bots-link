@@ -288,39 +288,51 @@ const botLists = {
         bots: [
 
             {
-                name: "Bot 1",
-                description: "Description for Telegram Bot 1.",
-                link: "https://t.me/YourBot1"
+                name: "Support & Donate 5 TG ☆ Stars",
+                description: "Support Our Work with 5 TG ☆ Stars",
+                link: "https://t.me/$OF6nIGuTCUbEAgAAiJgBEhBVdXU"
             },
 
             {
-                name: "Bot 2",
-                description: "Description for Telegram Bot 2.",
-                link: "https://t.me/YourBot2"
+                name: "Support & Donate 10 TG ☆ Stars",
+                description: "Support Our Work with 10 TG ☆ Stars",
+                link: "https://t.me/$AooalWuTCUbGAgAAMwYWBpqTwUg"
             },
 
             {
-                name: "Bot 3",
-                description: "Description for Telegram Bot 3.",
-                link: "https://t.me/YourBot3"
+                name: "Support & Donate 25 TG ☆ Stars",
+                description: "Support Our Work with 25 TG ☆ Stars",
+                link: "https://t.me/$0gV8imuTCUbHAgAAX_H7MWllt6E"
             },
 
             {
-                name: "Bot 4",
-                description: "Description for Telegram Bot 4.",
-                link: "https://t.me/YourBot4"
+                name: "Support & Donate 50 TG ☆ Stars",
+                description: "Support Our Work with 50 TG ☆ Stars",
+                link: "https://t.me/$qP1y6muTCUbJAgAAyAK30li3TG8"
             },
 
             {
-                name: "Bot 5",
-                description: "Description for Telegram Bot 5.",
-                link: "https://t.me/YourBot5"
+                name: "Support & Donate 100 TG ☆ Stars",
+                description: "Support Our Work with 100 TG ☆ Stars",
+                link: "https://t.me/$sOjoZ2uTCUbKAgAAUaWDlXihvqc"
             },
 
             {
-                name: "Bot 10",
-                description: "Description for Telegram Bot 10.",
-                link: "https://t.me/YourBot10"
+                name: "Support & Donate 250 TG ☆ Stars",
+                description: "Support Our Work with 250 TG ☆ Stars",
+                link: "https://t.me/$NKvUlWuTCUbNAgAA0-aJGDa0e7M"
+            },
+
+            {
+                name: "Support & Donate 500 TG ☆ Stars",
+                description: "Support Our Work with 500 TG ☆ Stars",
+                link: "https://t.me/$yzCU2GuTCUbOAgAAswn5d9Acad8"
+            },
+
+            {
+                name: "Support & Donate 1000 TG ☆ Stars",
+                description: "Support Our Work with 1000 TG ☆ Stars",
+                link: "https://t.me/$5TH9lmuTCUbPAgAAWPsKu-BzBMQ"
             }
 
         ]
