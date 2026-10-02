@@ -336,7 +336,7 @@ const botLists = {
 
         title: "Bots Contact Channels",
         icon: "📞",
-        description: "Explore & Join Growing Channel Networks",
+        description: "Explore & Join Growing Channel Network",
 
         bots: [
 
