@@ -28,9 +28,9 @@ const botLists = {
         bots: [
 
             {
-                name: "FotoX",
+                name: "SHY / ShirtUp",
                 description: "#Best AI-Powered Photo to Video Magic.!!",
-                link: "https://fotox.io/?ref=db6c6d23"
+                link: "https://telegram.me/Mak576_bot?start=a7rpMf"
             },
 
             {
@@ -64,15 +64,15 @@ const botLists = {
             },
 
             {
-                name: "UndressLab.AI",
+                name: "UDress Bot",
                 description: "#One Photo with Endless AI Possibilities.!!",
-                link: "https://t.me/Despir_Foto_Pro_Bot?start=ref_087326b04c"
+                link: "https://telegram.me/Theudrixxiibot?start=ref_5700146507"
             },
 
             {
-                name: "SHY / ShirtUp Bot",
+                name: "NageAI Bot",
                 description: "#Best Video Generation Bot, AI Powered.!!",
-                link: "https://telegram.me/Vnrzz12yBot?start=a7rpMf"
+                link: "https://telegram.nageai.org/5700146507"
             }
 
         ]
@@ -99,15 +99,15 @@ const botLists = {
             },
 
             {
-                name: "UDress Bot",
+                name: "Satisfactory",
                 description: "Create Stunning Videos From Any Photos.",
-                link: "https://telegram.me/Nrbr1udddbobot?start=ref_5700146507"
+                link: "https://satisfactory.studio/r/ref_5700146507"
             },
 
             {
                 name: "MaxUnDress",
                 description: "#AI Turns Photos Into Pure Magic Photos.",
-                link: "https://telegram.me/aiimg23bot?start=D5L3t3zm"
+                link: "https://t.me/aiimg847bot?start=D5L3t3zm"
             },
 
             {
