@@ -28,51 +28,51 @@ const botLists = {
         bots: [
 
             {
-                name: "Pu✰e Nu✰e",
+                name: "Pu✰e Nu✰e Bot",
                 description: "#Best AI-Powered Photo to Video Magic.!!",
-                link: "https://telegram.me/fern_n5wl0bot?start=5700146507"
+                link: "https://nude.fotox.app/tg?start=5700146507"
             },
 
             {
                 name: "SHY / ShirtUp",
                 description: "#No.1 Best Professional AI Photo & Video.",
-                link: "https://telegram.me/Spicius_Bot?start=a7rpMf"
+                link: "https://ultragens.com/a7rpMf"
             },
 
             {
-                name: "Pixel Edit Pro Bot",
+                name: "Photo Magic Bot",
                 description: "#1 Good Professional Photos & Video Bot.",
-                link: "https://telegram.me/DeepEditAIBot?start=5700146507"
+                link: "https://qowijoi.lol/tg/bot?ref_id=5700146507"
             },
 
             {
-                name: "Remove Shirt Bot",
+                name: "U1Dress Bot",
                 description: "#1 Good Professional Photos & Video Bot.",
-                link: "https://telegram.me/MatchimvuBot?start=5700146507"
+                link: "https://udrezzbot.com/5700146507"
             },
 
             {
-                name: "Easy AI Photo Bot",
+                name: "Satisfactory Bot",
                 description: "#1 Good Professional Photos & Video Bot.",
-                link: "https://telegram.me/Shhsjshsbotototobot?start=5700146507"
+                link: "https://satisfactory.studio/r/ref_5700146507"
             },
 
             {
-                name: "Photo Magics Bot",
+                name: "FotoX Web App",
                 description: "#1 Good Professional Photos & Video Bot.",
-                link: "https://telegram.me/PhoneixMovieHubbot?start=5700146507"
+                link: "https://fotox.io/?ref=db6c6d23"
             },
 
             {
-                name: "UDress Bot",
+                name: "Deep AI Video Entry",
                 description: "#One Photo with Endless AI Possibilities.!!",
-                link: "https://telegram.me/Theiddezxibot?start=ref_5700146507"
+                link: "https://deepaivideopro.com/i/k8g1RuwxEo"
             },
 
             {
-                name: "NageAI Bot",
+                name: "MaxUnDress Bot",
                 description: "#Best Video Generation Bot, AI Powered.!!",
-                link: "https://telegram.me/undress83639bot?start=5700146507"
+                link: "https://braundress.me/entry?start=D5L3t3zm"
             }
 
         ]
@@ -93,51 +93,51 @@ const botLists = {
         bots: [
 
             {
-                name: "Deep AI Video Entry",
-                description: "#1 Ultimate Image & Video Nu✰e Creator.",
-                link: "https://deepaivideopro.com/i/k8g1RuwxEo"
-            },
-
-            {
-                name: "Satisfactory",
-                description: "Create Stunning Videos From Any Photos.",
-                link: "https://telegram.me/Satisfactory2026bot?start=ref_5700146507"
-            },
-
-            {
-                name: "MaxUnDress",
-                description: "#AI Turns Photos Into Pure Magic Photos.",
-                link: "https://telegram.me/aiimg847bot?start=D5L3t3zm"
-            },
-
-            {
                 name: "Moonlit Lounge",
-                description: "Creating Cinematic #AI Videos Instantly.!!",
-                link: "https://telegram.me/aiimageso39jbot?start=l_PfvVT1WE"
+                description: "#1 Ultimate Image & Video Nu✰e Creator.",
+                link: "https://link.nudify.systems/?r=NTcwMDE0NjUwN0meKuQ"
             },
 
             {
                 name: "UndressLab.Ai",
+                description: "Create Stunning Videos From Any Photos.",
+                link: "https://undresslab.ink/link/?ref=087326b04c"
+            },
+
+            {
+                name: "AI Sparks Bot",
+                description: "#AI Turns Photos Into Pure Magic Photos.",
+                link: "https://t.me/aisparks_c51548bot?start=ref_4ASMNFSY"
+            },
+
+            {
+                name: "AI Mirage Bot",
+                description: "Creating Cinematic #AI Videos Instantly.!!",
+                link: "https://ai-mirage.org/r/5700146507"
+            },
+
+            {
+                name: "Spy Cloth Bot",
                 description: "Turn Ur Images Into Amazing AI Videos..!!",
-                link: "https://telegram.me/ObjectRemoverCoreBot?start=ref_087326b04c"
+                link: "https://bot.spycloth.net/?ref=5700146507"
             },
 
             {
-                name: "AI Mirage",
+                name: "LivePhoto Bot",
                 description: "Transform Photos Into AI MasterPieces..!!",
-                link: "https://telegram.me/tyirgerjrbaznmgelBot?start=r_5700146507"
+                link: "https://link.liveph.net/tg/bot?start=friend_5700146507"
             },
 
             {
-                name: "Mira AI",
+                name: "KISEX AI",
                 description: "#1 Ultimate Image & Video Nu✰es Creator.",
-                link: "https://telegram.me/MiraGenerationBot?start=ref_5700146507"
+                link: "https://t.me/K1LITKA_bot?start=r-c0u6k"
             },
 
             {
-                name: "Spy Cloth",
+                name: "Eros AI",
                 description: "#No.1 Adult Videos Generator AI-Powered.",
-                link: "https://telegram.me/AstridRoyalBot?start=ref5700146507"
+                link: "https://erosai.to/tg?ref=e64b042f2640"
             }
 
         ]
@@ -158,51 +158,51 @@ const botLists = {
         bots: [
 
             {
-                name: "AI Sparks Slight Bot",
+                name: "Gener AI Bot",
                 description: "Create Sparkling AI Videos From Photo..!!",
-                link: "https://telegram.me/myaisparksbotbbot?start=ref_4ASMNFSY"
+                link: "https://generai.org/telegram?start=ref_6814fa6f8f"
+            },
+
+            {
+                name: "NageAI Bot",
+                description: "Transform Photos Into AI MasterPieces.!!",
+                link: "https://telegram.nageai.org/5700146507"
             },
 
             {
                 name: "Vixal AI Bot",
-                description: "Transform Photos Into AI MasterPieces.!!",
-                link: "https://telegram.me/VixalAIImg7_bot?start=5700146507"
-            },
-
-            {
-                name: "Hot Dreams Bot",
                 description: "#1 Good Professional Photos & Video Bot.",
-                link: "https://t.me/hot_dr3ams_bot?start=5700146507"
+                link: "https://vixal.to/i2i/5700146507"
             },
 
             {
-                name: "BOTY",
+                name: "AI Draw Bot",
                 description: "Create Stunning Videos From Any Photos.",
-                link: "https://t.me/B0ty3Bot?start=refv_F138A760886EAF58796712F14C03F2CF"
+                link: "https://t.me/drawai_1_bot?start=5700146507"
             },
 
             {
-                name: "AI Edit Bot",
+                name: "ClotheX AI",
                 description: "Transform Photos Into AI MasterPieces.!!",
-                link: "https://t.me/Wkwkibot?start=5700146507"
+                link: "https://t.me/Thexx7_bot?start=ref_5700146507"
             },
 
             {
-                name: "Best AI Edit Bot",
+                name: "LucyferCat",
                 description: "#One Photo with Endless AI Possibilities.!!",
-                link: "https://t.me/Wofxibot?start=5700146507"
+                link: "https://t.me/LucyferCatcopybot?start=5700146507"
             },
 
             {
-                name: "AI Image & AI Video",
+                name: "Flux Edit Bot",
                 description: "Turn Ur Images Into Amazing AI Videos..!!",
-                link: "https://telegram.me/ai_image222bot?start=5700146507"
+                link: "https://fluxeditbot.com/r/ze3trbn"
             },
 
             {
-                name: "AI Draw",
+                name: "Mirai AI",
                 description: "#AI Turns Photos Into Pure Magic Photos.",
-                link: "https://t.me/aidraw_8_bot?start=5700146507"
+                link: "https://telegram.me/mirai_gen_v3_bot?start=5700146507"
             }
 
         ]
@@ -223,51 +223,51 @@ const botLists = {
         bots: [
 
             {
-                name: "Video Generator",
+                name: "AI Image & AI Video",
                 description: "Turn Ur Images Into Amazing AI Videos..!!",
-                link: "https://telegram.me/GeneratorAiBotVideo_Bot"
+                link: "https://invite.pixfits.ai?u=5700146507"
+            },
+
+            {
+                name: "BOTY",
+                description: "#No.1 Adult Videos Generator AI-Powered.",
+                link: "https://botynude.com/ref/YHBO8KCE"
+            },
+
+            {
+                name: "Sumka AI",
+                description: "#1 Good Professional Photos & Video Bot.",
+                link: "https://sumka.top/5700146507"
+            },
+
+            {
+                name: "Lustra",
+                description: "#Best Video Generation Bot, AI Powered.!!",
+                link: "https://lustra.top/824WQ"
+            },
+
+            {
+                name: "Video Generator",
+                description: "#1 Ultimate Image & Video Nu✰e Creator.",
+                link: "https://botsgates-html.vercel.app/?b=img2vid&r=5700146507"
             },
 
             {
                 name: "PlayBox",
-                description: "#No.1 Adult Videos Generator AI-Powered.",
+                description: "Turn Crush Photos Into Stunning AI Video.",
                 link: "https://www.playbox.com/?ref=Ar803"
             },
 
             {
-                name: "Bot 3",
-                description: "#1 Good Professional Photos & Video Bot.",
-                link: "https://t.me/YourBot3"
-            },
-
-            {
-                name: "Bot 4",
-                description: "#Best Video Generation Bot, AI Powered.!!",
-                link: "https://t.me/YourBot4"
-            },
-
-            {
-                name: "Bot 5",
-                description: "#1 Ultimate Image & Video Nu✰e Creator.",
-                link: "https://t.me/YourBot5"
-            },
-
-            {
-                name: "Bot 6",
-                description: "Turn Crush Photos Into Stunning AI Video.",
-                link: "https://t.me/YourBot6"
-            },
-
-            {
-                name: "Bot 7",
+                name: "Hot Dreams Bot",
                 description: "Dress Beauty Re-Imagined by AI-Power..!!",
-                link: "https://t.me/YourBot7"
+                link: "http://hotdreamsai.com/?start=5700146507"
             },
 
             {
-                name: "Bot 10",
+                name: "18xAI Bot",
                 description: "Create Stunning Videos From Any Photos.",
-                link: "https://t.me/YourBot10"
+                link: "https://t.me/i2x2027bot?start=r5700146507"
             }
 
         ]
