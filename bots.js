@@ -42,7 +42,7 @@ const botLists = {
             {
                 name: "SHY / ShirtUp Bot",
                 description: "#No.1 Adult Video Generator AI-Powered.",
-                link: "https://telegram.me/example27777_bot?start=a7rpMf"
+                link: "https://telegram.me/LunaLe69Bot?start=a7rpMf"
             },
 
             {
@@ -95,13 +95,13 @@ const botLists = {
             {
                 name: "Moonlit Lounge",
                 description: "#1 Ultimate Image & Video Nu✰e Creator.",
-                link: "https://telegram.me/Romoxsi2_bot?start=NTcwMDE0NjUwN0meKuQ"
+                link: "https://telegram.me/Nyxen20002_bot?start=l_4ncyXnTa"
             },
 
             {
                 name: "UndressLab.Ai",
                 description: "Create Stunning Videos From Any Photos.",
-                link: "https://telegram.me/PixelFixerSpectrumLabBot?start=ref_087326b04c"
+                link: "https://telegram.me/SmartMaskPrismStudio2Bot?start=ref_087326b04c"
             },
 
             {
@@ -131,7 +131,7 @@ const botLists = {
             {
                 name: "KISEX AI",
                 description: "#1 Ultimate Image & Video Nu✰es Creator.",
-                link: "https://telegram.me/K1LITKA_bot?start=r-c0u6k"
+                link: "https://kisex.cc/m/kfkdb"
             },
 
             {
@@ -172,7 +172,7 @@ const botLists = {
             {
                 name: "Vixal AI Bot",
                 description: "#1 Good Professional Photos & Video Bot.",
-                link: "https://telegram.me/VixalAIImg7_bot?start=5700146507"
+                link: "https://vixal.to/i2i/5700146507"
             },
 
             {
@@ -190,7 +190,7 @@ const botLists = {
             {
                 name: "LucyferCat",
                 description: "#One Photo with Endless AI Possibilities.!!",
-                link: "https://telegram.me/LucyferCatcopybot?start=5700146507"
+                link: "https://t.me/LucyferCatcopy2bot?start=5700146507"
             },
 
             {
