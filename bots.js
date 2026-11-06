@@ -42,7 +42,7 @@ const botLists = {
             {
                 name: "SHY / ShirtUp Bot",
                 description: "#No.1 Adult Video Generator AI-Powered.",
-                link: "https://telegram.me/LunaLe69Bot?start=a7rpMf"
+                link: "https://telegram.me/Neriink_bot?start=a7rpMf"
             },
 
             {
@@ -72,7 +72,7 @@ const botLists = {
             {
                 name: "MaxUnDress Bot",
                 description: "#Best Video Generation Bot, AI Powered.!!",
-                link: "https://telegram.me/airealitygatebot?start=D5L3t3zm"
+                link: "https://telegram.me/velumiboxbot?start=D5L3t3zm"
             }
 
         ]
@@ -95,13 +95,13 @@ const botLists = {
             {
                 name: "Moonlit Lounge",
                 description: "#1 Ultimate Image & Video Nu✰e Creator.",
-                link: "https://telegram.me/Nyxen20002_bot?start=l_4ncyXnTa"
+                link: "http://telegram.me/Qwavobot?start=NTcwMDE0NjUwN0meKuQ"
             },
 
             {
                 name: "UndressLab.Ai",
                 description: "Create Stunning Videos From Any Photos.",
-                link: "https://telegram.me/SmartMaskPrismStudio2Bot?start=ref_087326b04c"
+                link: "https://telegram.me/SnapFixerPolarisUltraBot?start=ref_087326b04c"
             },
 
             {
